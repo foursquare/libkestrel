@@ -24,6 +24,7 @@ object Libkestrel extends Build {
     libraryDependencies ++= Seq(
       "com.twitter" % "util-core" % utilVersion,
       "com.twitter" % "util-logging" % utilVersion,
+      "org.codehaus.jsr166-mirror" % "jsr166x" % "1.7.0",
 
       // for tests only:
       "org.scalatest" %% "scalatest" % "1.8" % "test",

@@ -21,8 +21,9 @@ import com.twitter.logging.Logger
 import com.twitter.util._
 import java.io.{File, FileOutputStream, IOException}
 import java.nio.ByteBuffer
-import java.util.concurrent.{ConcurrentLinkedDeque, ScheduledExecutorService}
+import java.util.concurrent.ScheduledExecutorService
 import java.util.concurrent.atomic.{AtomicInteger,AtomicLong}
+import jsr166x.ConcurrentLinkedDeque
 import scala.annotation.tailrec
 import scala.collection.immutable
 import scala.collection.mutable
