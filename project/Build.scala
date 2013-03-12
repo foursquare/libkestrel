@@ -14,7 +14,7 @@ object Libkestrel extends Build {
   ).settings(
     name := "libkestrel",
     organization := "com.twitter",
-    version := "2.0.1-SNAPSHOT",
+    version := "2.0.1-fs",
     scalaVersion := "2.9.2",
 
     // time-based tests cannot be run in parallel
@@ -34,6 +34,8 @@ object Libkestrel extends Build {
 
     scalacOptions += "-deprecation",
     SubversionPublisher.subversionRepository := Some("https://svn.twitter.biz/maven-public"),
-    publishArtifact in Test := true
+    publishArtifact in Test := true,
+    publishTo := Some("Sonatype Nexus Repository Manager" at "http://nexus.prod.foursquare.com/nexus/content/repositories/thirdparty"),
+    credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
   )
 }
